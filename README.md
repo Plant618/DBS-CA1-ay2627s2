@@ -204,7 +204,7 @@ ecommerce/
 
 ## 8. Author
 
-**Name:** [Tan Mu Ling]
+**Name:** Tan Mu Ling
 
 **Student ID:** 2523398
 
