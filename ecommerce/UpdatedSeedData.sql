@@ -12,20 +12,20 @@ SELECT setval('public.member_role_id_seq', 2, true);
 -- Passwords are bcrypt hashes of 'Password1!'
 -- ============================================
 INSERT INTO public.member (id, username, email, dob, password, role, gender) VALUES
-(1,  'admin',        'admin@shop.com',        '1985-03-15', '$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 1, 'M'),
-(2,  'johnsmith',    'john@example.com',      '1995-06-20', '$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 2, 'M'),
-(3,  'janetaylor',   'jane@example.com',      '1998-11-05', '$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 2, 'F'),
-(4,  'mikewong',     'mike@example.com',      '1990-02-28', '$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 2, 'M'),
-(5,  'sarahlee',     'sarah@example.com',     '2000-07-14', '$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 2, 'F'),
-(6,  'davidtan',     'david@example.com',     '1993-09-30', '$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 2, 'M'),
-(7,  'emilychua',    'emily@example.com',     '1997-04-18', '$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 2, 'F'),
-(8,  'ryanng',       'ryan@example.com',      '1988-12-01', '$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 2, 'M'),
-(9,  'lisamei',      'lisa@example.com',      '2002-08-22', '$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 2, 'F'),
-(10, 'tomkoh',       'tom@example.com',       '1991-01-10', '$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 2, 'M'),
-(11, 'nancylim',     'nancy@example.com',     '1996-05-25', '$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 2, 'F'),
-(12, 'kevinoh',      'kevin@example.com',     '1983-10-08', '$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 2, 'M'),
-(13, 'gracetan',     'grace@example.com',     '1999-03-17', '$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 2, 'F'),
-(14, 'bennylow',     'benny@example.com',     '1987-07-04', '$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 2, 'M');
+(1,  'admin',        'admin@shop.com',        '1985-03-15', '$2b$10$kH2WwqpgCdE00PEN5yyvk.bZmg0/bpkXQ869JpM1KBcT/nqqnk5Km', 1, 'M'),
+(2,  'johnsmith',    'john@example.com',      '1995-06-20', '$2b$10$kH2WwqpgCdE00PEN5yyvk.bZmg0/bpkXQ869JpM1KBcT/nqqnk5Km', 2, 'M'),
+(3,  'janetaylor',   'jane@example.com',      '1998-11-05', '$2b$10$kH2WwqpgCdE00PEN5yyvk.bZmg0/bpkXQ869JpM1KBcT/nqqnk5Km', 2, 'F'),
+(4,  'mikewong',     'mike@example.com',      '1990-02-28', '$2b$10$kH2WwqpgCdE00PEN5yyvk.bZmg0/bpkXQ869JpM1KBcT/nqqnk5Km', 2, 'M'),
+(5,  'sarahlee',     'sarah@example.com',     '2000-07-14', '$2b$10$kH2WwqpgCdE00PEN5yyvk.bZmg0/bpkXQ869JpM1KBcT/nqqnk5Km', 2, 'F'),
+(6,  'davidtan',     'david@example.com',     '1993-09-30', '$2b$10$kH2WwqpgCdE00PEN5yyvk.bZmg0/bpkXQ869JpM1KBcT/nqqnk5Km', 2, 'M'),
+(7,  'emilychua',    'emily@example.com',     '1997-04-18', '$2b$10$kH2WwqpgCdE00PEN5yyvk.bZmg0/bpkXQ869JpM1KBcT/nqqnk5Km', 2, 'F'),
+(8,  'ryanng',       'ryan@example.com',      '1988-12-01', '$2b$10$kH2WwqpgCdE00PEN5yyvk.bZmg0/bpkXQ869JpM1KBcT/nqqnk5Km', 2, 'M'),
+(9,  'lisamei',      'lisa@example.com',      '2002-08-22', '$2b$10$kH2WwqpgCdE00PEN5yyvk.bZmg0/bpkXQ869JpM1KBcT/nqqnk5Km', 2, 'F'),
+(10, 'tomkoh',       'tom@example.com',       '1991-01-10', '$2b$10$kH2WwqpgCdE00PEN5yyvk.bZmg0/bpkXQ869JpM1KBcT/nqqnk5Km', 2, 'M'),
+(11, 'nancylim',     'nancy@example.com',     '1996-05-25', '$2b$10$kH2WwqpgCdE00PEN5yyvk.bZmg0/bpkXQ869JpM1KBcT/nqqnk5Km', 2, 'F'),
+(12, 'kevinoh',      'kevin@example.com',     '1983-10-08', '$2b$10$kH2WwqpgCdE00PEN5yyvk.bZmg0/bpkXQ869JpM1KBcT/nqqnk5Km', 2, 'M'),
+(13, 'gracetan',     'grace@example.com',     '1999-03-17', '$2b$10$kH2WwqpgCdE00PEN5yyvk.bZmg0/bpkXQ869JpM1KBcT/nqqnk5Km', 2, 'F'),
+(14, 'bennylow',     'benny@example.com',     '1987-07-04', '$2b$10$kH2WwqpgCdE00PEN5yyvk.bZmg0/bpkXQ869JpM1KBcT/nqqnk5Km', 2, 'M');
 
 SELECT setval('public.member_id_seq', 14, true);
 

@@ -1,0 +1,260 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f7fb;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(135deg, #0f4c75, #1b6ca8);
+  padding: 0 32px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.nav-icon { font-size: 1.4rem; }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-welcome {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.88rem;
+}
+
+.nav-link {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  font-size: 0.88rem;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.nav-link:hover { background: rgba(255,255,255,0.15); }
+
+.btn-logout {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-logout:hover { background: rgba(255,255,255,0.25); }
+
+/* Page Header */
+.page-header {
+  background: linear-gradient(135deg, #1b6ca8, #2c7a7b);
+  padding: 36px 32px;
+  color: #fff;
+}
+
+.page-header h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.page-header p {
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+/* Main */
+.main-content {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 28px 24px;
+}
+
+/* Button */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgb(226, 226, 226);
+  color: black;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.back-btn:hover { 
+  background: rgb(208, 208, 208); 
+}
+
+/* Form */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 35px 40px;
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto 0;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+  border: 1px solid #e8edf2;
+}
+
+/* Card Heading */
+.card-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.review-icon {
+  width: 55px;
+  height: 55px;
+  background: #eaf4fb;
+  color: #1b6ca8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 15px;
+}
+
+.card-heading h2 {
+  font-size: 1.5rem;
+  color: #174d70;
+  margin-bottom: 8px;
+}
+
+.card-heading p {
+  color: #7a8793;
+  font-size: 0.9rem;
+}
+
+.form-group {
+  margin-bottom: 28px;
+}
+
+.form-group h3,
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 650;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+.input-description {
+  color: #84909b;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+textarea {
+	width: 100%;
+	background: var(--light);
+	padding: 1rem;
+	border-radius: .5rem;
+	border: none;
+	outline: none;
+	resize: none;
+	margin-bottom: .5rem;
+}
+
+.form-footer {
+  text-align: center;
+  color: #98a3ad;
+  font-size: 0.8rem;
+  margin-top: 20px;
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #1b6ca8, #2c7a7b);
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 9px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Rating/Stars */
+.rating {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-gap: .5rem;
+	font-size: 2rem;
+	color: #FFBD13;
+	margin-bottom: 2rem;
+}
+.rating .star {
+	cursor: pointer;
+}
+.rating .star.active {
+	opacity: 0;
+	animation: animate .5s calc(var(--i) * .1s) ease-in-out forwards;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+
+.rating .star:hover {
+	transform: scale(1.1);
+}

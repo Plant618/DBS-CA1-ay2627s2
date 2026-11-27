@@ -12,6 +12,8 @@ DROP TABLE IF EXISTS public.sale_order CASCADE;
 DROP TABLE IF EXISTS public.member CASCADE;
 DROP TABLE IF EXISTS public.member_role CASCADE;
 DROP TABLE IF EXISTS public.product CASCADE;
+DROP TABLE IF EXISTS public.review CASCADE;
+DROP TABLE IF EXISTS public.comment CASCADE;
 
 -- ============================================
 -- CREATE TABLES (Pre-existing schema)
