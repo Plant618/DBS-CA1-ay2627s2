@@ -76,12 +76,12 @@ CREATE TABLE public.review (
 	text TEXT NOT NULL, 
 	last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
 
-CONSTRAINT fk_member_id FOREIGN KEY (member_id) REFERENCES public.member(id), 
+    CONSTRAINT fk_member_id FOREIGN KEY (member_id) REFERENCES public.member(id), 
 
-CONSTRAINT fk_product_id FOREIGN KEY (product_id) REFERENCES public.product(id), 
+    CONSTRAINT fk_product_id FOREIGN KEY (product_id) REFERENCES public.product(id), 
 	
--- Checks that 1 member only has 1 review for 1 product
-UNIQUE (member_id, product_id) 
+    -- Checks that 1 member only has 1 review for 1 product
+    UNIQUE (member_id, product_id) 
 );
 
 CREATE TABLE public.comment (
@@ -91,15 +91,16 @@ CREATE TABLE public.comment (
 	member_id INT NOT NULL, 
 	text TEXT NOT NULL, 
 
-CONSTRAINT fk_member_id FOREIGN KEY (member_id) REFERENCES public.member(id), 
-	
--- If review is deleted, comments also deleted
-CONSTRAINT fk_review_id FOREIGN KEY (review_id) REFERENCES public.review(id) ON DELETE CASCADE, 
+    CONSTRAINT fk_member_id FOREIGN KEY (member_id) REFERENCES public.member(id), 
+        
+    -- If review is deleted, comments also deleted
+    CONSTRAINT fk_review_id FOREIGN KEY (review_id) REFERENCES public.review(id) ON DELETE CASCADE, 
 
-	-- Checks that parent comment belongs to the same review 
--- If parent comment is deleted comments also deleted
-CONSTRAINT fk_parent_comment FOREIGN KEY (parent_comment_id, review_id) REFERENCES public.comment(id, review_id) ON DELETE CASCADE, 
+        -- Checks that parent comment belongs to the same review 
+    -- If parent comment is deleted comments also deleted
+    CONSTRAINT fk_parent_comment FOREIGN KEY (parent_comment_id, review_id) REFERENCES public.comment(id, review_id) ON DELETE CASCADE, 
 
--- Needed for the composite foreign key
-CONSTRAINT unique_comment_review UNIQUE (id, review_id) );
+    -- Needed for the composite foreign key
+    CONSTRAINT unique_comment_review UNIQUE (id, review_id) 
+);
 
